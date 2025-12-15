@@ -110,7 +110,7 @@ apps:
   - name: vllm
     project: vllm
     namespace: vllm
-    automated: false
+    automated: true
     valueFiles:
       - values.yaml
 
