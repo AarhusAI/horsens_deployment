@@ -385,26 +385,26 @@ open-webui:
       value: "64"
 
     # STT (whisper)
-    - name: AUDIO_STT_ENGINE
-      value: "openai"
-    - name: AUDIO_STT_OPENAI_API_BASE_URL
-      value: "https://whisper.itkdev.dk/"
-    - name: AUDIO_STT_OPENAI_API_KEY
-      valueFrom:
-        secretKeyRef:
-          name: openwebui-secrets
-          key: STT_API_KEY
+    # - name: AUDIO_STT_ENGINE
+    #   value: "openai"
+    # - name: AUDIO_STT_OPENAI_API_BASE_URL
+    #   value: "https://whisper.itkdev.dk/"
+    # - name: AUDIO_STT_OPENAI_API_KEY
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: openwebui-secrets
+    #       key: STT_API_KEY
 
-    # TTS (piper)
-    - name: AUDIO_TTS_ENGINE
-      value: "openai"
-    - name: AUDIO_TTS_OPENAI_API_BASE_URL
-      value: "https://tts.itkdev.dk/"
-    - name: AUDIO_TTS_OPENAI_API_KEY
-      valueFrom:
-        secretKeyRef:
-          name: openwebui-secrets
-          key: TTS_API_KEY
+    # # TTS (piper)
+    # - name: AUDIO_TTS_ENGINE
+    #   value: "openai"
+    # - name: AUDIO_TTS_OPENAI_API_BASE_URL
+    #   value: "https://tts.itkdev.dk/"
+    # - name: AUDIO_TTS_OPENAI_API_KEY
+    #   valueFrom:
+    #     secretKeyRef:
+    #       name: openwebui-secrets
+    #       key: TTS_API_KEY
 
     # Disable direct connections (do not allow users to connect to new servers)
     - name: ENABLE_DIRECT_CONNECTIONS
