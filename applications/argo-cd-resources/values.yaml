@@ -118,7 +118,7 @@ apps:
   - name: searxng
     project: searxng
     namespace: searxng
-    automated: false
+    automated: true
     valueFiles:
       - values.yaml
 
