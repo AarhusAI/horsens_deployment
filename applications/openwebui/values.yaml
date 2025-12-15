@@ -277,7 +277,7 @@ open-webui:
     - name: ENABLE_PERSISTENT_CONFIG
       value: "False"
     - name: ENABLE_SIGNUP
-      value: "True"
+      value: "False"
     - name: ENABLE_LOGIN_FORM
       value: "True"
     - name: WEBUI_URL
