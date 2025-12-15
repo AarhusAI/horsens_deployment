@@ -281,9 +281,9 @@ open-webui:
     - name: ENABLE_LOGIN_FORM
       value: "True"
     - name: WEBUI_URL
-      value: "https://ai.aarhuskommune.dk"
+      value: "https://ai.horsens.os2ai.dk"
     - name: CORS_ALLOW_ORIGIN
-      value: "https://ai.aarhuskommune.dk;http://ai.aarhuskommune.dk"
+      value: "https://ai.horsens.os2ai.dk;http://ai.horsens.os2ai.dk"
     - name: USER_AGENT
       value: "AarhusAI"
     - name: DEFAULT_LOCALE
