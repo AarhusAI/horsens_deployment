@@ -52,11 +52,11 @@ prometheus-stack:
       annotations:
         cert-manager.io/cluster-issuer: letsencrypt
       hosts:
-        - grafana.example.com
+        - obs.horsens.os2ai.dk
       tls:
         - secretName: grafana-tls
           hosts:
-            - grafana.example.com
+            - obs.horsens.os2ai.dk
 
     additionalDataSources:
       - name: Loki
@@ -97,8 +97,8 @@ prometheus-stack:
 
     grafana.ini:
       server:
-        domain: grafana.example.com
-        root_url: https://grafana.example.com
+        domain: obs.horsens.os2ai.dk
+        root_url: https://obs.horsens.os2ai.dk
       auth.anonymous:
         enabled: false
       auth.basic:

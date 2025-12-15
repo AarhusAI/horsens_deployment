@@ -50,7 +50,7 @@ apps:
   - name: prometheus-stack
     project: monitoring
     namespace: monitoring
-    automated: false
+    automated: true
     syncOptions:
       - ServerSideApply=true
 
