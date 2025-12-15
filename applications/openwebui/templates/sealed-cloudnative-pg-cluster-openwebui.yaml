@@ -1,0 +1,17 @@
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: cloudnative-pg-cluster-openwebui
+  namespace: openwebui
+spec:
+  encryptedData:
+    password: AgCJOeIT7keyHb7Yt5y0B8COjo2Afd9bqXcp1jtB3/SLLkzQfILdYiLS/inPLeScPjVi2fqUAJ43EHcr8rv+RE4RHce7TA0EJfPKzu9nuDm+QiXL5GP9BfdK7Jeq9xKppbJ6qcKwsbBAhujH//i1y9eH/0E0+m4PsiKGXxCW1e8rUJWFPQXvpsJA8qZQUWVot+puDScsy3phhuQngvO3komcKmzxMeP/GbRWvm5BjjK3S+zXsYMoyxMrjY3RgJG/G9GaUmmczi105EUSSPaJNE6wlWCJbm0zJl7XmqG4EVBiRMgY3rPXaoR9BoBl4MjZoGNUS9/oj1YeR++9LFt4jqFgSL9lousrM+AILikUmE99k6zjkpMKuXSyue7buIern/ig8WzlaPRDw6WeNEvl0GZwBJ0oW3V9oq7pzaSH4mGwA026KAq2bQDauKSUEywIqFcFA3Ahcy5oZpZnWOLREUitScQ7lUrL812ACKyJLngeUm9064A+LK6HPkM3ONHiCGXfCbS4mhlIWZSGNVHSa9T25afLLxS9WoBwpUG0RtxTMAZZgvZ00iZG0sp/tp11Pj6LxwJzCac9AJpNcrMzWPQXWkZ/QcRHh+AXeGF2W4RiE9Aa8fwG9NZSVqd8SU2TbRJ8ySzJJ0BN2WJjE+6abIl4irfIqqKM2Bo4iA3IAIUp6YSPYJbo4xcqxK5wGb/YbAryvQ6fqVlsTGcltGsxq4uHyPiXcZ/33Y9tGDNWSqr49A==
+    username: AgAZG2WFmcrJPfVV5gmHDBoYN/RvnRzwN3Bci8PkTtcpBoMFng5MAe0sr8agspXHYdcWpZ790GwNu0BvaF9HJL/U3W6zr+5frSSj6qVpt825sVsquB35bvr8WrEpiF+6XUQUWzkj0y9ipPutq9tOpu65q7yqcsFm/AtBDZKFLykdbUCRb2S7ABOGPBdCMuG+LnBc7bD9+rTTfQWI9uR/+f14fcbfd39UBJeFunGZFBoL8GrbwkNoW1Z9xZlJHws0DAzsOgwH+57FElwqeFIx0AmN6mKhHrF3J0nhbtdiUS6z16tTLADuemVCtpW+GF4DZwPhOAgl+86VqR8lkBECuW9FqndhtA+pcRB0eNF0iWru5VwBmAgzMq4ZmUkAj48ujXHfd9wLczncqlZT/fpZoh2iGNrYDX7J+wlJfSY9Gixn1gzE+nZXPQ/A8Myu2N82lAOJjYNS7zH71UVRHkaTcSRq2vu+iANBq7V3HakTXPTvxzL4Ei4ChqZyEk/zAA3effwQL85+9b1w7XM65P+b+OPukVCO26I7isXQ47zItg7SbKk1czY02eRjJ6Nd/TpQIXvOZ1AYg388zLNS4V6o+Ape1Z/ru7ELUGeVMyKJ+KWrUWuS6U+0ar7vaehP51ex4L6CnZnI/k/RbhxWHauTxngrooaCfVCOKMl2+0q5PG+6JY0VQPnneEgj7k14urEPcW4o/Gy1Hv4sdM4=
+  template:
+    metadata:
+      creationTimestamp: null
+      name: cloudnative-pg-cluster-openwebui
+      namespace: openwebui
+    type: Opaque

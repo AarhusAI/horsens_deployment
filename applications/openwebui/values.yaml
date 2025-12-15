@@ -156,12 +156,12 @@ open-webui:
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
       traefik.ingress.kubernetes.io/router.middlewares: openwebui-was-redirect@kubernetescrd
-    host: ai.<FQDN>
+    host: ai.horsens.os2ai.dk
     additionalHosts: []
     tls:
       - hosts:
-          - ai.<FQDN>
-        secretName: ai.<FQDN>-tls
+          - ai.horsens.os2ai.dk
+        secretName: ai.horsens.os2ai.dk-tls
     existingSecret: ""
     extraLabels: {}
     # extraLabels:
@@ -468,7 +468,7 @@ open-webui:
         ### Eksempler på DÅRLIGE queries (undgå):
         ❌ "Aarhus byråd" (for bred)
         ❌ "medlemmer Aarhus byråd" (unatural ordstilling)
-        ❌ "hvordan virker byråd" (forkert fokus)  
+        ❌ "hvordan virker byråd" (forkert fokus)
 
         ### Hvornår søge:
         ✓ Fakta, tal, navne, aktuelle data
