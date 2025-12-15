@@ -103,7 +103,7 @@ apps:
   - name: doc-ingestion
     project: doc-ingestion
     namespace: doc-ingestion
-    automated: false
+    automated: true
     valueFiles:
       - values.yaml
 
