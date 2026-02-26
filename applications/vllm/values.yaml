@@ -43,7 +43,7 @@ vllm:
               operator: "In"
               values:
                 - "true"
-            - key: kubernetes.io/hostname
+            - key: nvidia.com/gpu.product
               operator: "In"
               values:
                 # Send this to the large GPU node
@@ -91,7 +91,7 @@ vllm:
                 operator: "In"
                 values:
                   - "true"
-              - key: kubernetes.io/hostname
+              - key: nvidia.com/gpu.product
                 operator: "In"
                 values:
                   # Send this to the small GPU node
