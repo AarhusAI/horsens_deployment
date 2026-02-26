@@ -7,7 +7,7 @@ open-webui:
   # -- Open WebUI image tags can be found here: https://github.com/open-webui/open-webui
   image:
     repository: ghcr.io/aarhusai/open-webui
-    tag: "v0.6.41-3"
+    tag: "v0.6.43-1"
     pullPolicy: "IfNotPresent"
 
   ollama:
@@ -149,6 +149,7 @@ open-webui:
 
   managedCertificate:
     enabled: false
+
   ingress:
     enabled: true
     class: "traefik"
@@ -298,6 +299,16 @@ open-webui:
     - name: ENABLE_NOTES
       value: "False"
 
+    # AAK ODIC patch config
+    - name: AAK_OAUTH_ENABLE_ROLE_GROUPS_MAPPING
+      value: "False" # Disabled as default
+    - name: AAK_OAUTH_GROUP_CLAIMS
+      value: '["companyname", "division", "department", "extensionAttribute12", "Office"]'
+    - name: AAK_OAUTH_GROUP_ID_CLAIM
+      value: "extensionAttribute7"
+    - name: AAK_OAUTH_GROUP_ID_SEPARATOR
+      value: ";"
+
     # Redis cache
     - name: REDIS_URL
       value: "redis://open-webui-redis:6379/1"
@@ -384,27 +395,27 @@ open-webui:
     - name: RAG_EMBEDDING_BATCH_SIZE
       value: "64"
 
-    # STT (whisper)
-    # - name: AUDIO_STT_ENGINE
-    #   value: "openai"
-    # - name: AUDIO_STT_OPENAI_API_BASE_URL
-    #   value: "https://whisper.itkdev.dk/"
-    # - name: AUDIO_STT_OPENAI_API_KEY
-    #   valueFrom:
-    #     secretKeyRef:
-    #       name: openwebui-secrets
-    #       key: STT_API_KEY
+    # STT (whisper) - OPTIONAL IF YOU WANT TO USE SPEECH-TO-TEXT (https://github.com/AarhusAI/whisper-api)
+#    - name: AUDIO_STT_ENGINE
+#      value: "openai"
+#    - name: AUDIO_STT_OPENAI_API_BASE_URL
+#      value: "https://whisper.itkdev.dk/"
+#    - name: AUDIO_STT_OPENAI_API_KEY
+#      valueFrom:
+#        secretKeyRef:
+#          name: openwebui-secrets
+#          key: STT_API_KEY
 
-    # # TTS (piper)
-    # - name: AUDIO_TTS_ENGINE
-    #   value: "openai"
-    # - name: AUDIO_TTS_OPENAI_API_BASE_URL
-    #   value: "https://tts.itkdev.dk/"
-    # - name: AUDIO_TTS_OPENAI_API_KEY
-    #   valueFrom:
-    #     secretKeyRef:
-    #       name: openwebui-secrets
-    #       key: TTS_API_KEY
+    # TTS (piper) - OPTIONAL IF YOU WANT TO USE TEXT-TO-SPEECH (https://github.com/AarhusAI/piper-tts)
+#    - name: AUDIO_TTS_ENGINE
+#      value: "openai"
+#    - name: AUDIO_TTS_OPENAI_API_BASE_URL
+#      value: "https://tts.itkdev.dk/"
+#    - name: AUDIO_TTS_OPENAI_API_KEY
+#      valueFrom:
+#        secretKeyRef:
+#          name: openwebui-secrets
+#          key: TTS_API_KEY
 
     # Disable direct connections (do not allow users to connect to new servers)
     - name: ENABLE_DIRECT_CONNECTIONS
@@ -467,7 +478,7 @@ open-webui:
         ### Eksempler på DÅRLIGE queries (undgå):
         ❌ "Aarhus byråd" (for bred)
         ❌ "medlemmer Aarhus byråd" (unatural ordstilling)
-        ❌ "hvordan virker byråd" (forkert fokus)
+        ❌ "hvordan virker byråd" (forkert fokus)  
 
         ### Hvornår søge:
         ✓ Fakta, tal, navne, aktuelle data

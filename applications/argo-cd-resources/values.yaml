@@ -1,3 +1,5 @@
+repoUrl: https://github.com/AarhusAI/horsens_deployment.git
+
 apps:
   # Basic setup
   - name: argo-cd-resources
@@ -55,7 +57,7 @@ apps:
   - name: prometheus-stack
     project: monitoring
     namespace: monitoring
-    automated: true
+    automated: false
     syncOptions:
       - ServerSideApply=true
 
@@ -84,7 +86,7 @@ apps:
   - name: openwebui
     project: openwebui
     namespace: openwebui
-    automated: true
+    automated: false
     valueFiles:
       - cloudnative-pg-values.yaml
       - qdrant-values.yaml
@@ -93,7 +95,7 @@ apps:
   - name: litellm
     project: litellm
     namespace: litellm
-    automated: true
+    automated: false
     valueFiles:
       - litellm-values.yaml
       - cloudnative-pg-values.yaml
@@ -108,14 +110,14 @@ apps:
   - name: doc-ingestion
     project: doc-ingestion
     namespace: doc-ingestion
-    automated: true
+    automated: false
     valueFiles:
       - values.yaml
 
   - name: vllm
     project: vllm
     namespace: vllm
-    automated: true
+    automated: false
     valueFiles:
       - values.yaml
 
@@ -123,7 +125,7 @@ apps:
   - name: searxng
     project: searxng
     namespace: searxng
-    automated: true
+    automated: false
     valueFiles:
       - values.yaml
 
